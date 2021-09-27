@@ -1,4 +1,4 @@
-# Valant
+# Valant Maze Runner
 
 This project was generated using [Nx](https://nx.dev).
 
@@ -35,3 +35,8 @@ Run `ng build demo` to build the project. The build artifacts will be stored in 
 - Run `ng test demo` to execute the unit tests via [Jest](https://jestjs.io).
 - Run `nx affected:test` to execute the unit tests affected by a change.
 - Run `npm run test:all` to run all unit tests in watch mode. They will re-run automatically as you make changes that affect the tests.
+
+## About this Project
+There are many things in this project that I did not get a chance to include in the timeframe of the exercise. Currently the app has a pre-built list of Mazes that can be modified in the MazeService. The user has the option of opening a 5x5 maze and interacting with the api to make valid moves. If more time was spent the functionality for reaching the end tile could be added as well as many tests verifying behavior that was testing manually in the process.
+
+This app is in a good starting state to expand on if given more time, including a spritesheet to add more visually engaging maze designs with randomized variety thrown in so users keep experimenting with different designs!
