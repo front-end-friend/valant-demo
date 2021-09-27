@@ -1,0 +1,21 @@
+<header class="flex">
+  <img alt="Valant logo" width="150" src="../assets/valant_logo.png" />
+  <h1>Welcome to {{ title }}</h1>
+</header>
+<main>
+  <div class="layout">
+    <valant-message title="Instructions">
+      Select one of the pre-built mazes to explore!
+    </valant-message>
+    <div class="maze-grid" *ngIf="mazes$ | async as availableMazes">
+      <valant-maze-grid [mazes]="availableMazes" (selectedMaze)="setMaze($event)"></valant-maze-grid>
+    </div>
+    <ng-container *ngIf="mazeSession$ | async as mazeSession">
+      <ng-container *ngIf="userPosition$ | async as userPosition">
+    <ng-container *ngIf="availableMoves$ | async as moves">
+          <valant-maze-runner [mazeSession]="mazeSession" [moves]="moves" [position]="userPosition" (move)="onMove($event)"></valant-maze-runner>
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </div>
+</main>

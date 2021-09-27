@@ -1,0 +1,41 @@
+.tile {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 0;
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &-start {
+    background-color: greenyellow;
+  }
+  &-end {
+    background-color: red;
+
+  }
+  &-path {
+    background-color: yellow;
+  }
+  &-empty {
+    background-color: black;
+  }
+}
+
+.maze {
+  background-color: black;
+  width: 500px;
+}
+
+.maze-row {
+  margin: 0;
+  padding: 0;
+  height: 100px;
+}
+.player-marker {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  color: blue;
+}

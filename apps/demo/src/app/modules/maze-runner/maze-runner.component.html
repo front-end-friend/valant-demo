@@ -1,0 +1,21 @@
+<valant-popup [show]="show">
+  <div class="maze-runner">
+    <div class="flex-row">
+      <div class="flex-column">
+        <h2>Play Maze</h2>
+      </div>
+      <div class="flex-column" (click)="show = false">
+        Close X
+      </div>
+    </div>
+    <div class="flex-row maze-container" style="margin-top: 20px;">
+      <valant-maze [maze]="maze" [player]="position"></valant-maze>
+    </div>
+    <div class="button-container">
+      <span [ngClass]="{ 'disabled' : leftDisabled }" (click)="moveLeft()">Left</span>
+      <span [ngClass]="{ 'disabled' : rightDisabled }" (click)="moveRight()">Right</span>
+      <span [ngClass]="{ 'disabled' : upDisabled }"(click)="moveUp()">Up</span>
+      <span [ngClass]="{ 'disabled' : downDisabled }"(click)="moveDown()">Down</span>
+    </div>
+  </div>
+</valant-popup>

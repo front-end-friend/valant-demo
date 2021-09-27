@@ -1,0 +1,7 @@
+<div class="maze">
+  <div class="maze-row" *ngFor="let row of rows; index as i">
+    <span *ngFor="let tileType of row; index as j" class="tile" [ngClass]="tileType">
+        <div *ngIf="player && player.x === i && player.y === j" class="player-marker">X</div>
+    </span>
+  </div>
+</div>
